@@ -1,0 +1,297 @@
+/* Generelle indstillinger og faste farver */
+:root {
+    --bg-color: #b2cbe8;
+    --card-bg: #f6f5ed;
+    --text-color: #000000;
+}
+
+body.dark-mode {
+    --bg-color: #002352; /* Baggrunden bliver #002352 */
+    --card-bg: #f6f5ed;  /* Kasser forbliver lyse */
+    --text-color: #000000;
+}
+
+/* Sørg for at almindelig tekst er sort */
+p, span, li, label, input, textarea {
+    color: #000000 !important;
+}
+
+h1, h2, h3, a {
+    color: #000000;
+}
+
+/* Kun overskriften "Hvad kan vi hjælpe med?" bliver hvid i dark mode – hero-teksten forbliver sort */
+body.dark-mode .cards-section h2 {
+    color: #ffffff !important; 
+}
+
+body.dark-mode .hero-box h1 {
+    color: #000000 !important; /* Holder "Velkommen til..." sort i dark mode */
+}
+
+body.large-text {
+    font-size: 1.2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* WCAG 2.2 Tastaturnavigation fokus */
+a:focus-visible, button:focus-visible {
+    outline: 3px solid #ffbf00;
+    outline-offset: 2px;
+}
+
+/* Header */
+.site-header {
+    background-color: var(--card-bg);
+    padding: 16px 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 24px;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.active {
+    text-decoration: underline;
+}
+
+/* Header ikoner */
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.moon-btn svg {
+    color: #ffc107;
+}
+
+.mobile-menu-btn {
+    display: flex;
+}
+
+.nav-dropdown {
+    background-color: var(--card-bg);
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-dropdown a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #000000;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Hovedindhold */
+.main-wrapper {
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hero-box {
+    background-color: var(--card-bg);
+    padding: 48px 32px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.hero-box h1 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    transition: color 0.3s ease;
+}
+
+.hero-box p {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.pill-btn {
+    display: inline-block;
+    background-color: #b2cbe8;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: #000000;
+}
+
+.page-title-box {
+    background-color: var(--card-bg);
+    padding: 24px 32px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.content-box {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    line-height: 1.8;
+}
+
+.cards-section {
+    margin-top: 20px;
+}
+
+.cards-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background-color: var(--card-bg);
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.card-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--card-bg);
+    margin-top: 60px;
+    padding: 48px 24px 24px 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.footer-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.footer-col p, .footer-col li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    list-style: none;
+}
+
+.footer-col ul a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    font-size: 0.85rem;
+}
+
+/* Mobilresponsivitet */
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: flex;
+    }
+}

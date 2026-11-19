@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Sundhed & Trivsel - Forside</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <nav class="desktop-nav" aria-label="Hovednavigation">
+                <a href="index.html" class="active">Forside</a>
+                <a href="om-angst.html">Angst</a>
+                <a href="ovelser.html">Øvelser</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+
+            <div class="header-icons">
+                <!-- Gul måne til Dark Mode -->
+                <button id="theme-toggle" class="icon-btn moon-btn" aria-label="Skift til mørk tilstand" title="Mørk tilstand">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-5.4-5.4c0-1.81.89-3.42 2.26-4.4C12.92 3.04 12.46 3 12 3z"/>
+                    </svg>
+                </button>
+
+                <!-- Forstørrelsesglas til tekststørrelse -->
+                <button id="text-size-toggle" class="icon-btn" aria-label="Juster tekststørrelse" title="Skift tekststørrelse">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                    </svg>
+                </button>
+
+                <!-- Menu-ikon -->
+                <button id="menu-toggle" class="icon-btn mobile-menu-btn" aria-label="Åbn menu" title="Menu">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Udfoldelig mobilmenu -->
+        <nav id="nav-menu" class="nav-dropdown hidden" aria-label="Mobilnavigation">
+            <a href="index.html">Forside</a>
+            <a href="om-angst.html">Angst</a>
+            <a href="ovelser.html">Øvelser</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </header>
+
+    <!-- Hovedindhold -->
+    <main class="main-wrapper">
+        
+        <!-- Hero-boks -->
+        <section class="hero-box">
+            <h1>Velkommen til en platform, hvor du finder tryghed og støtte</h1>
+            <p>Denne platform hjælper dig med at forstå angsten, hvordan du håndtere den og finde nogen du kan snakke med, for du er ikke alene.</p>
+            
+            <div class="hero-buttons">
+                <a href="om-angst.html" class="pill-btn">Hvad er angst?</a>
+                <a href="ovelser.html" class="pill-btn">Øvelser</a>
+                <a href="kontakt.html" class="pill-btn">Kontakt</a>
+            </div>
+        </section>
+
+        <!-- Sektion med tre kort -->
+        <section class="cards-section">
+            <h2>Hvad kan vi hjælpe dig med?</h2>
+            
+            <div class="cards-grid">
+                <article class="info-card">
+                    <h3>Hvad er angst?</h3>
+                    <p>Her kan du lære om angsten, og hvordan den påvirker dig.</p>
+                    <a href="om-angst.html" class="card-link">Hvad er angst? &rarr;</a>
+                </article>
+
+                <article class="info-card">
+                    <h3>Øvelser</h3>
+                    <p>Disse øvelse kan hjælpe dig med at håndtere din angst i hverdagen.</p>
+                    <a href="ovelser.html" class="card-link">Øvelser &rarr;</a>
+                </article>
+
+                <article class="info-card">
+                    <h3>Kontakt</h3>
+                    <p>Du er ikke alene. Vi er her for dig, så tøv ikke, tag kontakt til os helt anonymt.</p>
+                    <a href="kontakt.html" class="card-link">Kontakt &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Om Platformen</h4>
+                <p>Denne platform er egnet til unge, som har brug for et sted, til at lære mere om angsten og hvordan man håndtere den.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Genveje</h4>
+                <ul>
+                    <li><a href="index.html">Forside</a></li>
+                    <li><a href="om-angst.html">Hvad er angst?</a></li>
+                    <li><a href="ovelser.html">Øvelser</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Brug for hjælp?</h4>
+                <p>Tlf: +45 11 22 33 44</p>
+                <p>Tlf: +45 55 66 77 88</p>
+                <p>Tlf: +45 12 34 56 67</p>
+                <p><strong>Livslinien:</strong> 70 201 201 (Åbent 11–05)</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mental Sundhed & Trivsel.</p>
+        </div>
+    </footer>
+
+    <!-- Interaktiv JavaScript -->
+    <script>
+        const themeBtn = document.getElementById('theme-toggle');
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        const textSizeBtn = document.getElementById('text-size-toggle');
+        textSizeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('large-text');
+        });
+
+        const menuBtn = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
